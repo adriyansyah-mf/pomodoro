@@ -1,0 +1,30 @@
+.timer-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.timer-display {
+  font-size: 4rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.timer-controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer-controls button:first-of-type {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.timer-controls button:last-of-type {
+  background-color: #dc3545;
+  color: #fff;
+}
