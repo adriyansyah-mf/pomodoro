@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./todo.css"; // Include this for consistent styling
 
 const Todo = () => {
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(() => {
+        const storedTasks = localStorage.getItem("tasks");
+        return storedTasks ? JSON.parse(storedTasks) : [];
+    });
     const [taskInput, setTaskInput] = useState("");
+
+    // Save tasks to localStorage whenever tasks state changes
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     const addTask = () => {
         if (taskInput.trim() !== "") {
-            setTasks([...tasks, { text: taskInput, completed: false }]);
+            const newTask = { text: taskInput, completed: false };
+            setTasks([...tasks, newTask]);
             setTaskInput("");
         }
     };
