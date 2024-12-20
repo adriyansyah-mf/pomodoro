@@ -78,8 +78,21 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+}   
 
 .delete-button:hover {
     background-color: #d32f2f;
+}
+
+.time-settings input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ecf0f3;
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    font-size: 16px;
+    margin-top: 5px;
+    outline: none;
+    transition: all 0.3s ease;
 }
